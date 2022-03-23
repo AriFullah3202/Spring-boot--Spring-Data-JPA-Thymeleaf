@@ -36,6 +36,7 @@ public class OfferController {
     @PostMapping("/processOffer")
     public String processOffer(@ModelAttribute("offer") Offer offer) {
     	offerService.saveOffer(offer);
+    	
     	return"redirect:/offers";
     }
     @GetMapping("/update")
