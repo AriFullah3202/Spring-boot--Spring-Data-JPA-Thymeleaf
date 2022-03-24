@@ -38,11 +38,11 @@
 		</thead>
 		<tbody>
 		    <tr th:each="offer : ${listOfOffer}">
-		        <td th:text="${offer.Id}"></td>
+		        <td th:text="${offer.id}"></td>
 		        <td th:text="${offer.companayName}"></td>
 		        <td th:text="${offer.offerDetails}"></td>
 		        <td th:text="${offer.price}"></td>
-		        
+		        <td><a th:href="@{/update(offerId=${offer.id})}">update</a></td>
 		    </tr>
 		</tbody>
 

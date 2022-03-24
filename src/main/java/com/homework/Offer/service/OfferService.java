@@ -11,6 +11,7 @@ public interface OfferService {
   List<Offer> getAllOffer();
   void saveOffer(Offer offer);
   Offer getOffer(long id);
+  void update(Offer offer);
   void deleteOfferById(long id);
   Page<Offer> findPaginated(int pageNo, int page);
 }

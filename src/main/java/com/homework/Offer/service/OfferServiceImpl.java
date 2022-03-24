@@ -26,6 +26,7 @@ public class OfferServiceImpl implements OfferService {
 
 	@Override
 	public void saveOffer(Offer offer) {
+	
 		this.offerRepository.save(offer);
 	}
 
@@ -40,6 +41,10 @@ public class OfferServiceImpl implements OfferService {
 		}
 		
 	    return offer;
+	}
+	public void update(Offer offer) {
+	  offerRepository.save(offer);
+	
 	}
 
 	@Override
