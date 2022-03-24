@@ -42,7 +42,9 @@
 		        <td th:text="${offer.companayName}"></td>
 		        <td th:text="${offer.offerDetails}"></td>
 		        <td th:text="${offer.price}"></td>
-		        <td><a th:href="@{/update(offerId=${offer.id})}">update</a></td>
+		        <td><a th:href="@{/update(offerId=${offer.id})}" class="btn btn-primary">update</a>
+		        <a th:href="@{/delete(offerId=${offer.id})}" class="btn btn-primary">delete</a></td>
+		        
 		    </tr>
 		</tbody>
 

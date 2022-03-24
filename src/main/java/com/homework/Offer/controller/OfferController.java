@@ -58,9 +58,9 @@ public class OfferController {
     	return"redirect:/offers";
     }
     
-    @DeleteMapping("/delete")
+    @GetMapping("/delete")
     public String deleteOffer(@RequestParam("offerId") long id ){
         offerService.deleteOfferById(id);
-    	return "redirect:/";
+    	return "redirect:/offers";
     }
 }
