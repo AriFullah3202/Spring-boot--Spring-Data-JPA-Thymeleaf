@@ -54,8 +54,18 @@ public class OfferServiceImpl implements OfferService {
 
 	@Override
 	public Page<Offer> findPaginated(int pageNo, int page) {
-		Pageable pageable = PageRequest.of(pageNo, page);
+		Pageable pageable = PageRequest.of(pageNo-1, page);
 		return offerRepository.findAll(pageable);
+	}
+
+	@Override
+	public Offer fatchOfferDetails(String offerDetails) {
+		return offerRepository.findByOfferDetailsIgnoreCase(offerDetails);
+	}
+
+	@Override
+	public List<Offer> fatchOfferDetailsContaining(String offerDetails) {
+		return offerRepository.findByOfferDetailsContaining(offerDetails);
 	}
 
 }

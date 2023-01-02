@@ -13,5 +13,7 @@ public interface OfferService {
   Offer getOffer(long id);
   void update(Offer offer);
   void deleteOfferById(long id);
+  Offer fatchOfferDetails(String offerDetails);
+  List<Offer> fatchOfferDetailsContaining(String offerDetails);
   Page<Offer> findPaginated(int pageNo, int page);
 }
