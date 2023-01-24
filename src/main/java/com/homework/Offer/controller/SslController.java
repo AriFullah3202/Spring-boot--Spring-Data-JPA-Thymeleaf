@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
 
-import com.ssl.commerz.api.SSLCommerz;
+import com.homework.Offer.sslApi.SSLCommerz;
+
 
 @Controller
 public class SslController {
